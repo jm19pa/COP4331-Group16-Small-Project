@@ -1,0 +1,151 @@
+body{
+    background-image: url('../Images/JungleBackgroundBlur.png');
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #222831;
+}
+
+hr{
+    height: 3px;
+    background-color: white;
+    width: 100%;
+    color: white;
+    border-width: 0;
+}
+
+label{
+    font-size: larger;
+    font-weight: bold;
+}
+
+#monkey{
+    background-color: white;
+    width: 75%;
+    border-radius: 25px;
+    border: 0px;
+    padding: 7px 7px;
+}
+
+a{
+    font-size: larger;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: linen;
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+span label, input{
+    display: flex;
+    margin: auto;
+}
+
+.inputs{
+    background-color: white;
+    width: 200px;
+    border-radius: 25px;
+    border: 0px;
+    padding: 7px 7px;
+}
+
+.button{
+    background-color: #338020;
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+    width: 100px;
+    margin: auto;
+    font-weight: bold;
+    border: 0px;
+    padding: 5px 5px;
+}
+
+.button:hover{
+    background-color: #338020;
+    color: white;
+    opacity: 75%;
+    text-decoration: underline;
+}
+
+.loginBox{
+    background-color: #338020;
+    width: 100px;
+    border-radius: 25px;
+    color:white;
+    text-align: center;
+    padding: 1px;
+    float: right;
+    border-color: white;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.loginBox:hover{
+    color: white;
+    opacity: 75%;
+}
+
+/* box-shadow: horzontal, vertical, blur, color */
+
+.titleBackground{
+    background-color: #338020;
+    width: 500px;
+    border-radius: 25px;
+    color:white;
+    text-align: center;
+    margin: auto;
+    padding: 1px;
+}
+
+/* Comment */
+.myClass{ 
+    background-color: #393E46;
+    color: white;
+    margin: auto;
+    width: 750px;
+    padding: 2px;
+    text-align: center;
+    border-radius: 25px;
+    border-color: white;
+    border-style: solid;
+    border-width: 3px;
+}
+
+div.myClass div{
+    margin: 20px;
+}
+
+div.myClass table{
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    background-color: black;
+    width: 90%;
+}
+
+div.myClass tr:nth-child(even){
+    background-color: gray;
+}
+
+div.myClass th{
+    font-size: large;
+}
+
+div.myClass td, th{
+    text-align: center;
+    padding: 8px;
+    border: 1px solid white;
+}
+
