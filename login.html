@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="Styles/styles.css">
+    <link rel="icon" href="Images/favicon.png" type="image/x-icon" > <!-- Doesn't work right now... -->
+    <title>COP4331Group16</title>
+</head>
+<body>
+
+    <br>
+
+    <div class="loginBox">
+        <a href = "index.html" target=_self title="Main page">
+            <input class="button" type="submit" value="Home">
+        </a>
+
+    </div>
+
+    <div class="titleBackground">
+        <h1>COP4331 Group 16 Small Project</h1>
+    </div>
+
+    <br>
+
+    <div class="myClass">
+
+        <div>
+            <a>Don't have an account?</a>
+            <a href = "signup.html" target=_parent title="Register for an account" style="color: #338020;">
+                <u>Register</u>
+            </a>
+        </div>
+
+        <hr>
+        
+        <div>
+            <h2><u>Login</u></h2>
+
+            <label for="username_input">Username</label><br>
+            <input class="inputs" type="text" id="username_input" name="username_input" placeholder="User"><br><br>
+
+            <label for="password_input">Password</label><br>
+            <input class="inputs" type="password" id="password_input" name="password_input" placeholder="Pass"><br><br>
+        
+            <input class="button" type="submit" value="Submit" onclick="checkLogin()">
+        </div>
+
+        <div>
+            <img id="monkey" src="Images/transparentMonkey.gif" title="Monkey">
+        </div>
+
+    </div>
+
+    <script src="Js/program.js"></script>
+</body>
+</html>
