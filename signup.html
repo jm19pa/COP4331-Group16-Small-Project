@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="Styles/styles.css">
-    <link rel="icon" href="Images/favicon.png" type="image/x-icon" > <!-- Doesn't work right now... -->
+    <link rel="icon" href="Images/favicon.png" type="image/x-icon" >
+
+    <!-- Getting font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+    
     <title>COP4331Group16</title>
 </head>
 <body>
@@ -51,18 +57,6 @@
             <br><br><br><br>
 
             <span style="float: left; margin-left: 13%;">
-                <label for="phone">Phone</label>
-                <input class="inputs" type="text" id="phone" name="phone" placeholder="### - ### - ####">
-            </span>
-
-            <span style="float: right; margin-right: 13%;">
-                <label for="email">Email</label>
-                <input class="inputs" type="text" id="email" name="email" placeholder="example@mail.com">
-            </span>
-
-            <br><br><br><br>
-
-            <span style="float: left; margin-left: 13%;">
                 <label for="username_input">Username</label>
                 <input class="inputs" type="text" id="username_input" name="username_input" placeholder="User">
             </span>
@@ -74,7 +68,9 @@
 
             <br><br><br><br><br>
 
-            <input class="button" type="submit" value="Submit">
+            <input class="button" type="submit" value="Submit" onclick="register()">
+
+            <p id="error_display"></p>
         </div>
 
         <div>
@@ -82,6 +78,8 @@
         </div>
 
     </div>
+
+    <script src="Js/program.js"></script>
 
 </body>
 </html>

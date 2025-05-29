@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="Styles/styles.css">
-    <link rel="icon" href="Images/favicon.png" type="image/x-icon" > <!-- Doesn't work right now... -->
+    <link rel="icon" href="Images/favicon.png" type="image/x-icon" >
+
+    <!-- Getting font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+
     <title>COP4331Group16</title>
 </head>
 <body>
@@ -26,17 +32,51 @@
 
     <div class="myClass">
 
-        <h2>You have successfully signed in bozo</h2>
+        <h1>Contacts</h1>
 
-        <hr>
+        <button id="add_contact" title="Add Contact"><img src="Images/AddContact.png"></button>
+        <input type="text" id="user_search" name="user_search" placeholder="Search contact">
+        <!-- <input class="inputs" type="text" id="user_search" name="user_search" placeholder="Search contact" style="text-align: center; display: inline;"> -->
+
+        <br><br>
+
+        <table>
+            <tr>
+                <th>FIRST NAME</th>
+                <th>LAST NAME</th>
+                <th>EMAIL</th>
+                <th>PHONE #</th>
+                <th> </th>
+            </tr>
+            <!-- Insert code here -->
+            <tr>
+                <td>Rick</td>
+                <td>Leinecker</td>
+                <td>Example@mail.com</td>
+                <td>111-111-1111</td>
+                <td><button><img id="change" name="change" src="Images/ChangeIcon.png" title="Change"></button><button><img id="delete" name="delete" src="Images/TrashCan.png" title="Delete"></button></td>
+            </tr>
+            <tr>
+                <td>Winton</td>
+                <td>Overwat</td>
+                <td>Ape@mail.com</td>
+                <td>222-222-2222</td>
+                <td><button><img id="change" name="change" src="Images/ChangeIcon.png" title="Change"></button><button><img id="delete" name="delete" src="Images/TrashCan.png" title="Delete"></button></td>
+            </tr>
+            <tr>
+                <td>Funkier</td>
+                <td>Kong</td>
+                <td>Monkey@mail.com</td>
+                <td>333-333-3333</td>
+                <td><button><img id="change" name="change" src="Images/ChangeIcon.png" title="Change"></button><button><img id="delete" name="delete" src="Images/TrashCan.png" title="Delete"></button></td>
+            </tr>
+        </table>
 
         <div>
             <img id="monkey" src="Images/transparentMonkey.gif" title="Monkey">
         </div>
 
     </div>
-
-    <img src="Images/transparentMonkey.gif" width="100%">
 
     <script src="Js/program.js"></script>
 </body>
