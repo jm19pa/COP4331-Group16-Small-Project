@@ -3,8 +3,9 @@
 	
 	$firstName = $inData["FirstName"];
 	$lastName = $inData["LastName"];
-    $login = $inData["Login"];
+    	$login = $inData["Login"];
 	$password = $inData["Password"];
+	$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 	$conn = new mysqli("localhost", "TheBeast", "WeLoveCOP4331", "COP4331");
 	if ($conn->connect_error) 
