@@ -3,10 +3,9 @@
 	
     $firstName = $inData["FirstName"];
 	$lastName = $inData["LastName"];
-    $email = $inData["Email"];
+	$email = $inData["Email"];
 	$phone = $inData["Phone"];
-    $userID = $inData["UserID"];
-    $id = $inData["ID"];
+	$id = $inData["ID"];
 	
 	
 
@@ -17,12 +16,18 @@
 	} 
 	else
 	{
-		$stmt = $conn->prepare("UPDATE Contacts SET FirstName=?, LastName=?, Email=?, Phone=?, UserID=? WHERE ID = ?");
-		$stmt->bind_param("ssssii", $firstName, $lastName, $email, $phone, $userID, $id);
+		$stmt = $conn->prepare("UPDATE Contacts SET FirstName = ?, LastName = ?, Email = ?, Phone = ? WHERE ID = ?");
+		$stmt->bind_param("ssssi", $firstName, $lastName, $email, $phone, $id);
 		$stmt->execute();
+
+		if ($stmt->affected_rows == 0) {
+			returnWithError("No rows updated. SQL may have run but nothing changed. ID: $id");
+		} else {
+			returnWithError("");
+		}
+
 		$stmt->close();
 		$conn->close();
-		returnWithError("");
 	}
 
 	function getRequestInfo()
