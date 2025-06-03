@@ -14,8 +14,11 @@
 	{
 		$stmt = $conn->prepare("select * from Contacts where (FirstName like ? OR LastName like ? OR Phone like ? OR Email like ?) and UserID=?");
 		$contactName = "%" . $inData["search"] . "%";
-		$stmt->bind_param("sssss", $contactName, $contactName, $contactName, $contactName, $inData["UserID"]);
-		$stmt->execute();
+		$stmt->bind_param("sssss", $contactName, $contactName, $contactName, $contactName, $inData["userId"]);
+		if(!$stmt->execute()){
+			error_log("Query failed: " . $stmt->error);
+		}
+
 		
 		$result = $stmt->get_result();
 		
@@ -25,9 +28,9 @@
 			{
 				$searchResults .= ",";
 			}
+      
 			$searchCount++;
-			//$searchResults .= '"' . $row["FirstName"] . '"';
-            $searchResults .= '{"FirstName" : "' . $row["FirstName"] . '", "LastName" : "' . $row["LastName"] . '", "Email" : "' . $row["Email"] . '", "Phone" : "' . $row["Phone"] . '"}';
+			$searchResults .= '{"ID" : "' . $row["ID"] . '", "FirstName" : "' . $row["FirstName"] . '", "LastName" : "' . $row["LastName"] . '", "Email" : "' . $row["Email"] . '", "Phone" : "' . $row["Phone"] . '"}';
 		}
 		
 		if( $searchCount == 0 )
