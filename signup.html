@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="Styles/newStyles.css">
+    <link rel="icon" href="Images/favicon.png" type="image/x-icon" >
+
+    <!-- Getting font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+    
+    <meta name="description" content="COP4331 Group 16 Project. 
+    Group members: David Gusmao, Tyler Takimoto, Juan Pinero, Andres Casto.">
+   
+    <title>CS VS GORILLA</title>
+</head>
+<body>
+
+    <br>
+
+    <div class="loginBox">
+        <a href = "index.html" target=_self title="Main page">
+            <input class="button" type="submit" value="Home">
+        </a>
+    </div>
+
+    <div class="titleBackground">
+        <h1>100 CS MAJORS VS 1 GORILLA</h1>
+    </div>
+    
+    <br><br><br>
+
+    <div class="myClass">
+
+        <div>
+            <a>ALREADY JOINED?</a>
+            <a href = "login.html" target=_parent title="Login to existing account" style="color: #338020;">
+                <u>LOGIN!</u>
+            </a>
+        </div>
+
+        <hr>
+
+        <h2>CREATE YOUR ACCOUNT</h2>
+        
+        <div class="inputGrid">
+
+            <div>
+                <label id="first_name_label" for="first_name">FIRST NAME</label>
+                <input class="inputs" type="text" id="first_name" name="first_name" placeholder="John">
+            </div>
+
+            <div>
+                <label id="last_name_label" for="last_name">LAST NAME</label>
+                <input class="inputs" type="text" id="last_name" name="last_name" placeholder="Doe">
+            </div>
+
+            <div>
+                <label id="username_input_label" for="username_input">USER NAME</label>
+                <input class="inputs" type="text" id="username_input" name="username_input" placeholder="Create Username">
+            </div>
+
+            <div>
+                <label id="password_input_label" for="password_input"> PASSWORD</label>
+                <input class="inputs" type="password" id="password_input" name="password_input" placeholder="Create Password">
+            </div>
+        </div>
+
+        <input class="button" type="submit" value="JOIN" onclick="register()">
+
+        <p id="error_display"></p>
+
+        <div>
+            <img id="monkey" src="Images/transparentMonkey.gif" title="Monkey">
+        </div>
+
+    </div>
+
+    <script src="Js/program.js"></script>
+
+</body>
+</html>
